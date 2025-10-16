@@ -1,12 +1,16 @@
 <?php
 declare (strict_types = 1);
 
-namespace think\jwt\service;
+namespace think\service;
 
-use think\jwt\JWT;
+use think\JWT;
 
 class JWTService extends \think\Service
 {
+    public $bind = [
+        'jwt' => JWT::class,
+    ];
+
     /**
      * 注册服务
      *
@@ -15,8 +19,6 @@ class JWTService extends \think\Service
     public function register()
     {
     	//
-        var_dump($this);
-        $this->app->bind('jwt', JWT::class);
     }
 
     /**
@@ -27,6 +29,5 @@ class JWTService extends \think\Service
     public function boot()
     {
         //
-        echo 123;
     }
 }

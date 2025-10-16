@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'key'     => '',
+    'key' => '',
+    'alg' => 'HS256',
 ];
